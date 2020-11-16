@@ -1,22 +1,14 @@
-import React from "react";
-import animalFacts from "./data.jsx";
+import React, { useState } from "react";
 import FactsList from "./FactsList.jsx";
+import animalFacts from "./data.jsx";
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      facts: animalFacts,
-    };
-  }
-  render() {
-    return (
-      <div className="main">
-        <FactsList facts={this.state.facts} />
-      </div>
-    );
-  }
-}
+const App = () => {
+  const [facts, setFacts] = useState(animalFacts);
+  return (
+    <div className="main">
+      <FactsList facts={facts} />
+    </div>
+  );
+};
 
 export default App;
