@@ -3,14 +3,14 @@ import React from "react";
 
 // Use the div below to maintain existing CSS styling
 
-const Fact = () => {
+const Fact = ({ fact, btnFunction }) => {
   return (
     <div className="factCard">
-      <h1>{"TO DO: Add animal name from data"}</h1>
+      <h1>{fact.animal}</h1>
       {/* TODO: Attach a click event to the button */}
-      <button>{"Click to Favorite"}</button>
-      <img src={"TO DO: Add image link from data"} width="600" height="400" />
-      <h3>{"TO DO: Add animal fact from data"}</h3>
+      <button onClick={btnFunction}>{"Click to Favorite"}</button>
+      <img src={fact.image} width="600" height="400" />
+      <h3>{fact.fact}</h3>
     </div>
   );
 };
